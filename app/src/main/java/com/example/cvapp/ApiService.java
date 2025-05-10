@@ -12,4 +12,12 @@ public interface ApiService {
     Call<PredictionResponse> uploadImage(
             @Part MultipartBody.Part file // 🔥 Must be named "file"
     );
+
+    @Multipart
+    @POST("estimate-distance")
+
+    Call<DistanceResponse> estimateDistance(
+            @Part MultipartBody.Part file
+    );
+
 }
